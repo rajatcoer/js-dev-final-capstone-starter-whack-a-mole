@@ -7,7 +7,7 @@ const song = new Audio("https://github.com/gabrielsanchez/erddiagram/blob/main/m
 const whackSound = new Audio("https://github.com/gabrielsanchez/erddiagram/blob/main/hit.mp3?raw=true");
 
 
-let time = 10;
+let time = 50;
 let timer;
 let lastHole = 0;
 let points = 0;
