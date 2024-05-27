@@ -5,7 +5,7 @@ const score  = document.querySelector('#score');; // Used querySelector() to get
 const timerDisplay = document.querySelector('#timer');; // used querySelector() to get the timer element.
 const song = new Audio("https://github.com/gabrielsanchez/erddiagram/blob/main/molesong.mp3?raw=true");
 
-let time = 0;
+let time = 10;
 let timer;
 let lastHole = 0;
 let points = 0;
@@ -296,7 +296,7 @@ function stopGame(){
 */
 function startGame(event){
   event.preventDefault();
-  setDuration(10);
+  setDuration(time);
   loopAudio(song);
   showUp();
   return "game started";
