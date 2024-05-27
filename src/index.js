@@ -192,7 +192,7 @@ function clearScore() {
 *
 */
 function updateTimer() {
-  if (time>0) {
+  if (time > 0) {
     time -= 1;
     timerDisplay.textContent = time;
   }
@@ -219,6 +219,7 @@ function startTimer() {
 *
 */
 function whack(event) {
+  event.preventDefault();
   playAudio(whackSound);
   updateScore();
   return points;
@@ -298,6 +299,7 @@ function stopGame(){
 */
 function startGame(){
   setDuration(time);
+  timerDisplay.textContent = time;
   loopAudio(song);
   showUp();
   return "game started";
