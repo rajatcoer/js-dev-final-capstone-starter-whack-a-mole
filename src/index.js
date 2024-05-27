@@ -217,6 +217,7 @@ function startTimer() {
 *
 */
 function whack(event) {
+  event.preventDefault();
   updateScore();
   return points;
 }
@@ -293,7 +294,8 @@ function stopGame(){
 * is clicked.
 *
 */
-function startGame(){
+function startGame(event){
+  event.preventDefault();
   setDuration(10);
   loopAudio(song);
   showUp();
