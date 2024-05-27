@@ -14,14 +14,14 @@ h1 {
   text-align: center;
   font-size: 90px;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
-  color: white;
+  color: rgb(78, 10, 10);
   -webkit-text-stroke: 2px black;
 }
 
 h2 {
   text-align: center;
   font-size: 40px;
-  color: white;
+  color: rgb(59, 39, 96);
   -webkit-text-stroke: 1px black;
 }
 
@@ -31,7 +31,7 @@ h2 {
 }
 
 #timer{
-    color: white;
+    color: rgb(18, 62, 32);
 }
 
 .grid {
