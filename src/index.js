@@ -3,6 +3,7 @@ const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 const score  = document.querySelector('#score');; // Used querySelector() to get the score element
 const timerDisplay = document.querySelector('#timer');; // used querySelector() to get the timer element.
+const song = new Audio("https://github.com/gabrielsanchez/erddiagram/blob/main/molesong.mp3?raw=true");
 
 let time = 0;
 let timer;
@@ -165,7 +166,7 @@ function toggleVisibility(hole){
 *
 */
 function updateScore() {
-  points += 1;
+  points++;
   score.textContent = points;
   return points;
 }
@@ -243,6 +244,37 @@ function setDuration(duration) {
   return time;
 }
 
+
+/**
+*
+* This function plays the audio song.
+*
+*/
+function playAudio(audioObject) {
+  audioObject.play();
+}
+
+
+/**
+*
+* This function sets the loop to play the audio song repeatedly.
+*
+*/
+function loopAudio(audioObject) {
+  audioObject.loop = true;
+  playAudio(audioObject);
+}
+
+
+/**
+*
+* This function stops the audio song.
+*
+*/
+function stopAudio(audioObject) {
+  audioObject.pause();
+}
+
 /**
 *
 * This function is called when the game is stopped. It clears the
@@ -250,7 +282,7 @@ function setDuration(duration) {
 *
 */
 function stopGame(){
-  // stopAudio(song);  //optional
+  stopAudio(song);  //optional
   clearInterval(timer);
   return "game stopped";
 }
@@ -263,6 +295,7 @@ function stopGame(){
 */
 function startGame(){
   setDuration(10);
+  loopAudio(song);
   showUp();
   return "game started";
 }
