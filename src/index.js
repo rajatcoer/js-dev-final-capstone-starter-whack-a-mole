@@ -3,8 +3,8 @@ const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 const score  = document.querySelector('#score'); // Used querySelector() to get the score element
 const timerDisplay = document.querySelector('#timer'); // used querySelector() to get the timer element.
-const song = new Audio("../assets/molesong.mp3");
-const whackSound = new Audio("../assets/hit.mp3");
+const song = new Audio("https://github.com/gabrielsanchez/erddiagram/blob/main/molesong.mp3?raw=true");
+const whackSound = new Audio("https://github.com/gabrielsanchez/erddiagram/blob/main/hit.mp3?raw=true");
 
 
 let time = 10;
